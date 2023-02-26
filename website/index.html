@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<title>Drag & Drop in JavaScript</title>-->
+<title>Nexus</title>
+<link href="css/style1.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<head>
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load Posenet -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+ </head>
+
+  <!-- Place your code in the script tag below. You can also use an external .js file -->
+  <script>
+    var flipHorizontal = false;
+
+    var imageElement = document.getElementById('cat');
+
+    posenet.load().then(function(net) {
+      const pose = net.estimateSinglePose(imageElement, {
+        flipHorizontal: true
+      });
+      return pose;
+    }).then(function(pose){
+      console.log(pose);
+    })
+  </script>
+
+
+<body>
+
+<header>
+	<img src="img/logo.png" 
+    width="250" 
+    height="240" />
+	<nav>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="home-hero parallax--bg">
+	<div class="container">
+		<h1 class="title parallax--box">Making things looks great <span>for companies who make great stuff</span>
+		</h1>
+		<a href="" class="button button-accent">See Our Work</a>
+	</div>
+</section>
+
+<div class="container">
+	<section class="home-about">
+
+		<div class="home-about-textbox parallax--box">
+			<h1>Who we are</h1>
+			<p><strong>NEXUS STUDIO.</strong></p>
+            <p>Connecting dreams to reality.</p>
+		</div>
+
+	</section>
+</div>
+
+
+<section class="portfolio">
+	<h1>Some of our work</h1>
+
+	<!-- portfolio item 01 -->
+	<figure class="port-item">
+		<img src="img/portfolio-01.jpg" 
+        width="500" 
+     height="400" />
+		<figcaption class="port-desc">
+			<p>Interior commercial</p>
+			<a href="" class="button button-accent button-small">Sweet Escape</a>
+		</figcaption>
+	</figure>
+
+	<!-- portfolio item 02 -->
+	<figure class="port-item">
+		<img src="img/portfolio-02.jpg" 
+        width="500" 
+     height="
+	 1000" />
+		<figcaption class="port-desc">
+			<p>Interior Residential</p>
+			<a href="" class="button button-accent button-small">Interior</a>
+		</figcaption>
+	</figure>
+
+	<!-- portfolio item 03 -->
+	<figure class="port-item">
+		<img src="img/portfolio-03.jpg" 
+        width="500" 
+     height="270" />
+		<figcaption class="port-desc">
+			<p>Archetectural photography</p>
+			<a href="" class="button button-accent button-small">Hawa Mahal</a>
+		</figcaption>
+	</figure>
+
+	<!-- portfolio item 04 -->
+	<figure class="port-item">
+		<img src="img/portfolio-04.jpg"
+     width="500" 
+     height="400" />
+		<figcaption class="port-desc">
+			<p>Residential Design</p>
+			<a href="" class="button button-accent button-small">Hiremath Residence</a>
+		</figcaption>
+	</figure>
+
+	<!-- portfolio item 05 -->
+	<figure class="port-item">
+		<img src="img/portfolio-05.jpg" 
+	 width="500" 
+     height="400" />
+        <figcaption class="port-desc">
+			<p>Residential Design</p>
+			<a href="" class="button button-accent button-small">Surana Residence</a>
+		</figcaption>
+	</figure>
+
+	<!-- portfolio item 06 -->
+	<figure class="port-item">
+		<img src="img/portfolio-06.jpg" 
+        width="500" 
+     height="400" />
+		<figcaption class="port-desc">
+			<p>Residential Design</p>
+			<a href="" class="button button-accent button-small">Patil Parmhouse</a>
+		</figcaption>
+	</figure>
+
+</section>
+
+<section class="cta">
+	<div class="container">
+		<h1 class="title title-cta">Like what you see?
+			 <span>Then what are you waiting for?</span>
+		</h1>
+		<a href="hire us.html" class="button button-dark">Hire us</a>
+	</div>
+</section>
+
+<footer>
+	<div class="container">
+		<span>Thank you please visit again.</span>
+	</div>
+
+	
+</footer>
+
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+		<script src="js/parallax.js"></script>
+</body>
+</html>
